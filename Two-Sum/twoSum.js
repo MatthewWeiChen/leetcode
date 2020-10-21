@@ -5,6 +5,9 @@
 // Input: nums = [3, 2, 4], target = 6
 // Output: [1, 2]
 
+//input nums array
+//output
+
 var twoSum = function (nums, target) {
   const indexArr = [];
   for (let i = 0; i < nums.length; i++) {
@@ -19,3 +22,21 @@ var twoSum = function (nums, target) {
   }
   return indexArr;
 };
+
+function youtubeCode (nums,target){
+  let storage = {};
+
+  for(let [index,num] of nums.entries()){
+    if(storange[num] !== undefined) return [storage[num], index];
+    storage[target-num] = index;
+  }
+}
+
+// Example
+//[2,7,11,15]
+//index = 0 1
+//num = 2 7
+
+// storage = {
+//   '7': 0,
+// }
