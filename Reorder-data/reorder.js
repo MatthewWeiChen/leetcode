@@ -18,13 +18,9 @@ var reorderLogFiles = function (logs) {
   const letterArr = [];
   for(let i = 0; i < logs.length; i++){
     const tempArr = logs[i].split(' ');
-    if(isNaN(tempArr[1])){
-      letterArr.push(logs[i]);
-    } else {
-      numArr.push(logs[i]);
-    }
+    isNaN(tempArr[1]) ? letterArr.push(logs[i]) : numArr.push(logs[i]);
   }
-  storageArr.push(letterArr, numArr); //pushing arrays into array.
+  storageArr.push(letterArr, numArr);
   const flatArr = storageArr.flat();
 
   return flatArr;
