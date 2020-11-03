@@ -6,13 +6,33 @@
   2. Divided the problem in half
   3. Repeat the same approach (of starting in the middle) on the new half-size problem
   -do it again and again until we either find the number or "rule out" the whole set.
+  O(log2n)
 */
 
 function binarySearch(target, nums){
   let floorIndex = -1;
   let ceilingIndex = nums.length;
 
-  // while(floorIndex + 1 < ceilingIndex){
+  while(floorIndex + 1 < ceilingIndex){
+    const distance = ceilingIndex - floorIndex;
+    const halfDistance = Math.floor(distance / 2);
+    const guessIndex = floorIndex + halfDistance;
 
-  // }
+    const guessValue = nums[guessIndex];
+
+    if(guessValue === target){
+      ceilingIndex = guessIndex;
+    } else {
+      floorIndex = guessIndex;
+    }
+  }
+  return false;
 }
+
+/*
+nums.length = 4;
+distance = 4 - 0;
+halfDistance = 2;
+guessIndex = -1 + 2 = 1;
+guessValue = nums[1];
+*/
