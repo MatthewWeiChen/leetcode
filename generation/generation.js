@@ -1,5 +1,5 @@
-	function generation(x,y) {
-const elo = {
+function generation(x,y) {
+  const elo = {
   '-3': { m: "great grandfather", f: "great grandmother" },
   "-2": { m: "grandfather", f: "grandmother" },
   "-1": { m: "father", f: "mother" },
