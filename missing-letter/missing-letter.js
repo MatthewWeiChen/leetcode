@@ -37,3 +37,7 @@ function missingLetter(arr) {
   }
   }
 }
+
+missingLetter = a =>
+  String.fromCharCode(a.map(c => c.charCodeAt() + 1)
+                      .find((n, i, v) => n+1 < v[i+1]))
