@@ -5,3 +5,5 @@ function sumOfCubes(nums) {
   }
   return sum;
 }
+
+sumOfCubes();
