@@ -1,13 +1,18 @@
-function countingValleys(steps, path) {
-    const pathArr = path.split('');
-    let counter = 0;
-    for(let i = 0; i < pathArr.length; i++){
-      if(pathArr[i] === 'U'){
-        if(pathArr[i] === pathArr[i + 1]){
-          counter++;
-          i++
-        }
+function countingValleys(n, s) {
+  let currLevel = 0;
+  let valleys = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === 'U') {
+      currLevel++;
+      if (currLevel == 0) {
+        valleys += 1;
+        console.log(valleys);
       }
+    } else {
+      currLevel -= 1;
     }
-  return counter;
+  }
+  return valleys;
+
 }
