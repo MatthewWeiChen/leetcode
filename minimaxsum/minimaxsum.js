@@ -12,3 +12,10 @@ function miniMaxSum(arr) {
 
   console.log(`${min} ${max}`);
 }
+
+arr.sort((a, b) => a - b);
+console.log(
+  String(arr.slice(0, 4).reduce((a, b) => a + b)) +
+    " " +
+    String(arr.slice(1, 5).reduce((a, b) => a + b))
+);
