@@ -38,6 +38,7 @@ sayAge();
 
 //ES6
 
-const sayLocation = ()=> {
-  console.log('my location is unknown');
-}
+const sayLocation = location => console.log(`my location is ${location}`);
+
+
+sayLocation('paris')
