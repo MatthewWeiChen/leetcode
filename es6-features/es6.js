@@ -19,3 +19,25 @@ const list = {
 const {name,items} = list;
 
 console.log(name,items);
+
+
+/* Arrow Functions */
+
+//OLD JS
+
+function sayName(){
+  console.log('Hello I am Ed');
+}
+
+var sayAge = function(){
+  console.log('My age is, well I don/t wanna tell you');
+}
+
+sayName();
+sayAge();
+
+//ES6
+
+const sayLocation = ()=> {
+  console.log('my location is unknown');
+}
