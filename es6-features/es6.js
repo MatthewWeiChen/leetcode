@@ -42,3 +42,14 @@ const sayLocation = location => console.log(`my location is ${location}`);
 
 
 sayLocation('paris')
+
+//Default Parameters
+
+//OLD JS
+function multiply(x,y){
+  var a = x || 1;
+  var b = y || 1;
+  console.log(a*b);
+}
+
+multiply(5,10);
