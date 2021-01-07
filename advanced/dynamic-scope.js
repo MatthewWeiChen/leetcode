@@ -16,9 +16,9 @@ a();
 const obj = {
   name: "Billy",
   sing() {
-    console.log("a", this);
+    console.log("a", this); //this refers to the object
     var anotherFunc = function () {
-      console.log("b", this);
+      console.log("b", this); //this refers to the window object
     };
     anotherFunc();
   },
